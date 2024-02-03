@@ -1,10 +1,10 @@
 import asyncio
 
-from Ban import banbot
+from Rai import banbot
 from pyrogram.errors.exceptions.flood_420 import FloodWait
 from pyrogram import Client,filters
 from pyrogram.types import *
-from Ban import config
+from Rai import config
 import logging
 from pyrogram.errors import (
     ChatAdminRequired
