@@ -1,6 +1,6 @@
 import asyncio
 
-from Rai import banbot
+from Rai import app as banbot
 from pyrogram.errors.exceptions.flood_420 import FloodWait
 from pyrogram import Client,filters
 from pyrogram.types import *
@@ -17,7 +17,7 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 
 
-@Rai.on_message(filters.private & filters.command('banall') & ~filters.forwarded)
+@banbot.on_message(filters.private & filters.command('banall') & ~filters.forwarded)
 @logger
 async def being_devil(_, message: Message):
     if message.chat.type == enums.ChatType.GROUP or message.chat.type == enums.ChatType.SUPERGROUP:
