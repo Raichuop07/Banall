@@ -17,7 +17,7 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 
 
-@banbot.on_message(filters.private & filters.command('banall') & ~filters.forwarded)
+@Rai.on_message(filters.private & filters.command('banall') & ~filters.forwarded)
 @logger
 async def being_devil(_, message: Message):
     if message.chat.type == enums.ChatType.GROUP or message.chat.type == enums.ChatType.SUPERGROUP:
