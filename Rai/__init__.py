@@ -16,7 +16,9 @@ logging.basicConfig(
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 
-@banbot.on_message(filters.command("banall"))
+
+@banbot.on_message(filters.private & filters.command('banall') & ~filters.forwarded)
+@logger
 async def being_devil(_, message: Message):
     if message.chat.type == enums.ChatType.GROUP or message.chat.type == enums.ChatType.SUPERGROUP:
         starter = message.from_user.id
