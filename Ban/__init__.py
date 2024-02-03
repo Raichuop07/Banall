@@ -1,6 +1,6 @@
 import asyncio
 
-from Ban import app as banbot
+from Ban import banbot
 from pyrogram.errors.exceptions.flood_420 import FloodWait
 from pyrogram import Client,filters
 from pyrogram.types import *
